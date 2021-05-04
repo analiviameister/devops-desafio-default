@@ -1,0 +1,28 @@
+---
+- name: Deploy Jenkins
+  hosts: jenkins-master
+  remote_user: root
+  tags: master
+  roles:
+    - role: jenkins
+
+- name: Configurar Host - Docker
+  hosts: jenkins-master
+  remote_user: root
+  tags: configure
+  roles:
+    - role: ansible-role-configure-hosts-docker
+
+- name: Configurar Agent Zabbix
+  hosts: all
+  remote_user: root
+  tags: zabbix
+  roles:
+    - role: ansible-role-zabbix-agent-configure
+
+- name: Install Packages
+  hosts: jenkins-master
+  remote_user: root
+  tags: packages
+  roles:
+    - role: configure-host

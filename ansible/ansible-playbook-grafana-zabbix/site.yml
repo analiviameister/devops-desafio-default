@@ -1,0 +1,21 @@
+- name: Configurar hosts
+  hosts: grafana
+  remote_user: root
+  tags: configure
+  roles:
+    - role: ansible-role-configure-hosts-docker
+
+
+- name: Configurar Grafana
+  hosts: grafana
+  remote_user: root
+  tags: grafana
+  roles:
+    - role: grafana
+
+- name: Configurar Zabbix
+  hosts: zabbix
+  remote_user: root
+  tags: zabbix
+  roles:
+    - role: zabbix

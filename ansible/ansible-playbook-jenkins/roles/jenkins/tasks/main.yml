@@ -1,0 +1,25 @@
+---
+- name: Install JDK-11
+  apt: update_cache=yes name=default-jdk state=present
+
+- name: Add Jenkins GPG apt Key
+  apt_key: 
+    url: https://pkg.jenkins.io/debian/jenkins.io.key
+    state: present
+
+- name: Add Jenkins Repository
+  apt_repository:
+    repo: deb http://pkg.jenkins.io/debian-stable binary/
+    state: present
+    filename: jenkins
+
+- name: Install Jekins
+  apt: update_cache=yes name=jenkins state=present
+
+- name: Restart Jenkins
+  service: name=jenkins state=restarted
+  become_user: root
+
+- name: Configure Initial Password
+  command: cat /var/lib/jenkins/secrets/initialAdminPassword
+  register: jenkins_password
