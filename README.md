@@ -50,7 +50,7 @@ Dashboard do Centralizador de Logs:
 
 Haproxy Stats:
 
-- [HaproxyStats]([http://](http://104.196.164.201:81/stats))
+- [HaproxyStats]([http://](http://104.196.164.201:81/stats)
 
 
 ## Tecnologias utilizadas
