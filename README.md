@@ -62,3 +62,14 @@ Para automatização de tarefas e provisionamento, as seguintes ferramentas fora
 - [Terraform](https://github.com/analiviameister/desafio-devops/tree/master/terraform)
   
 - [Shell Script](https://github.com/analiviameister/desafio-devops/tree/master/scripts)
+
+
+## Outros repositórios utilizados no desafio
+
+Repositório da aplicação
+
+- [desafio-devops-app](https://github.com/analiviameister/desafio-devops-app)
+
+Repositório que contém arquivos de configuração de deployment da aplicação
+
+- [desafio-devops-app-configs](https://github.com/analiviameister/desafio-devops-app-configs)
