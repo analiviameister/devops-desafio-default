@@ -42,7 +42,7 @@ Monitoramento:
 
 Dashboard do Orquestrador de Contêineres
 
-- [Kubernetes_Dashboard](http://dash.k8s.desafio)
+- [Kubernetes_Dashboard](https://35.229.27.140:31000/)
 
 Dashboard do Centralizador de Logs:
 
